@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
 
 class ControlPanel extends Component {
+    state = {
+        power: true,
+        innerText: 'ON',
+        backgroundColor: '#64ffda'
+    }
+    togglePower = () => {
+        if(this.state.power) {
+            this.setState(() => ({
+                power: false,
+                innerText: 'OFF',
+                backgroundColor: ''
+            }))
+        } else {
+            this.setState(() => ({
+                power: true,
+                innerText: 'ON',
+                backgroundColor: '#64ffda'
+            }))
+        }
+    }
     render() {
         return (
             <div className='control-panel'>
                 <div className='button-container'>
-                    <button className='power'>Off</button>
+                    <button onClick={this.togglePower} className='power' style={{backgroundColor: this.state.backgroundColor}}>{this.state.innerText}</button>
                 </div>
                 
                 <div className='sound-name'></div>
