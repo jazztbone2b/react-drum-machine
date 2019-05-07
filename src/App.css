@@ -33,12 +33,32 @@ li {
     padding: 10px;
 }
 
-.pads {
+.grid-container > input {
+    -webkit-appearance: none;
+    outline: none;
     width: 100px;
     text-align: center;
     align-content: center;
     padding: 20px 0;
 }
+.pads {
+    font-size: 20px;
+    box-shadow: 2px 2px black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #616161;
+}
+
+.pads:active {
+    background-color: #64ffda;
+}
+/*.pads {
+    width: 100px;
+    text-align: center;
+    align-content: center;
+    padding: 20px 0;
+}*/
 
 .button-container {
     width: 100%;
@@ -72,6 +92,7 @@ button {
 .slider {
     width: 100%;
     margin-top: 10px;
+    height: -50px;
 }
 
 .slider:hover {
