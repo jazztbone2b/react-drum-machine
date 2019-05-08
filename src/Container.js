@@ -15,7 +15,6 @@ class Container extends Component {
         bankName: 'Drum Kit'
     }
     handleClick = () => {
-        console.log('clicked')
         this.state.bankOne ?
             this.setState(() => ({
                 bankOne: false,

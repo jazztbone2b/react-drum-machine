@@ -28,7 +28,7 @@ class ControlPanel extends Component {
                     <button onClick={this.togglePower} className='power' style={{backgroundColor: this.state.backgroundColor}}>{this.state.innerText}</button>
                 </div>
                 
-                <div className='sound-name'>{this.props.text}</div>
+                <div className='sound-name'><p>{this.props.text}</p></div>
 
                 <div className='slide-container'>
                     <input type="range" min="1" max="100" defaultValue="50" className="slider" />
