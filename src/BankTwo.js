@@ -69,6 +69,7 @@ class BankTwo extends Component {
         for (let i of padsTwo) {
             if (i.keypress === event.keyCode) {
                 document.getElementById(i.text).style.backgroundColor = '#64ffda';
+                document.getElementById('sound-name').innerHTML = i.id;
                 i.sound.currentTime = 0;
                 i.sound.play();
             }
@@ -78,6 +79,7 @@ class BankTwo extends Component {
         for (let i of padsTwo) {
             if (i.text === event.target.value) {
                 document.getElementById(i.text).style.backgroundColor = '#64ffda';
+                document.getElementById('sound-name').innerHTML = i.id;
                 i.sound.currentTime = 0;
                 i.sound.play();
             }

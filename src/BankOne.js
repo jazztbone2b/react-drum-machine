@@ -68,6 +68,7 @@ class BankOne extends Component {
         for (let i of padsOne) {
             if (i.keypress === event.keyCode) {
                 document.getElementById(i.text).style.backgroundColor = '#64ffda';
+                document.getElementById('sound-name').innerHTML = i.id;
                 i.sound.currentTime = 0;
                 i.sound.play();
             }
@@ -77,6 +78,7 @@ class BankOne extends Component {
         for (let i of padsOne) {
             if (i.text === event.target.value) {
                 document.getElementById(i.text).style.backgroundColor = '#64ffda';
+                document.getElementById('sound-name').innerHTML = i.id;
                 i.sound.currentTime = 0;
                 i.sound.play();
             }
