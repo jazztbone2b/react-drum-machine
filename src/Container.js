@@ -8,6 +8,7 @@ import ControlPanel from './ControlPanel';
 
 const pads = ['Q', 'W', 'E', 'A', 'S', 'D', 'Z', 'X', 'C'];
 
+//set power here and pass to control panel as props
 class Container extends Component {
     state = {
         bankOne: true,
