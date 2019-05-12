@@ -8,12 +8,15 @@ class ControlPanel extends Component {
     }
     togglePower = () => {
         if(this.state.power) {
+            this.props.callBackfromParent(false);
+            document.getElementById('sound-name').innerHTML = '';
             this.setState(() => ({
                 power: false,
                 innerText: 'OFF',
                 backgroundColor: ''
             }))
         } else {
+            this.props.callBackfromParent(true);
             this.setState(() => ({
                 power: true,
                 innerText: 'ON',
