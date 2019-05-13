@@ -72,7 +72,7 @@ class BankOne extends Component {
                 document.getElementById(i.text).style.backgroundColor = '#64ffda';
                 document.getElementById('sound-name').innerHTML = i.id;
                 i.sound.currentTime = 0;
-                i.sound.volume = volume / 100;
+                i.sound.volume = volume;
                 i.sound.play();
             }
         }
@@ -85,7 +85,7 @@ class BankOne extends Component {
                 document.getElementById(i.text).style.backgroundColor = '#64ffda';
                 document.getElementById('sound-name').innerHTML = i.id;
                 i.sound.currentTime = 0;
-                i.sound.volume = volume / 100;
+                i.sound.volume = volume;
                 i.sound.play();
             }
         }
