@@ -65,22 +65,28 @@ class BankTwo extends Component {
         document.removeEventListener('keyup', this.onkeyup);
         document.removeEventListener('mouseup', this.onMouseUp);
     }
-    handleKeyPress(event) {
+    handleKeyPress = (event) => {
+        let volume = this.props.volume / 100;
+
         for (let i of padsTwo) {
             if (i.keypress === event.keyCode) {
                 document.getElementById(i.text).style.backgroundColor = '#64ffda';
                 document.getElementById('sound-name').innerHTML = i.id;
                 i.sound.currentTime = 0;
+                i.sound.volume = volume / 100;
                 i.sound.play();
             }
         }
     }
-    handleClick(event) {
+    handleClick = (event) => {
+        let volume = this.props.volume / 100;
+        
         for (let i of padsTwo) {
             if (i.text === event.target.value) {
                 document.getElementById(i.text).style.backgroundColor = '#64ffda';
                 document.getElementById('sound-name').innerHTML = i.id;
                 i.sound.currentTime = 0;
+                i.sound.volume = volume / 100;
                 i.sound.play();
             }
         }
