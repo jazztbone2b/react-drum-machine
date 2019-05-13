@@ -4,11 +4,12 @@ class ControlPanel extends Component {
     state = {
         power: true,
         innerText: 'ON',
-        backgroundColor: '#64ffda'
+        backgroundColor: '#64ffda',
+        volume: 50
     }
     togglePower = () => {
         if(this.state.power) {
-            this.props.callBackfromParent(false);
+            this.props.callBackFromParent(false);
             document.getElementById('sound-name').innerHTML = '';
             this.setState(() => ({
                 power: false,
@@ -16,13 +17,21 @@ class ControlPanel extends Component {
                 backgroundColor: ''
             }))
         } else {
-            this.props.callBackfromParent(true);
+            this.props.callBackFromParent(true);
             this.setState(() => ({
                 power: true,
                 innerText: 'ON',
                 backgroundColor: '#64ffda'
             }))
         }
+    }
+    changeVolume = (e) => {
+        let output = e.target.value;
+        this.setState(() => ({
+            volume: output
+        }))
+        document.getElementById('sound-name').innerHTML = `Volume: ${output}`
+        this.props.getRangeVolume(output);
     }
     render() {
         return (
@@ -34,7 +43,7 @@ class ControlPanel extends Component {
                 <div className='sound-name'><p id='sound-name'>{this.props.text}</p></div>
 
                 <div className='slide-container'>
-                    <input type="range" min="1" max="100" defaultValue="50" className="slider" />
+                    <input type="range" min="1" max="100" className="slider" value={this.state.volume} onChange={this.changeVolume}/>
                 </div>
 
                 <div className='button-container'>
