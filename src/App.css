@@ -94,3 +94,13 @@ button {
 .slider::-webkit-slider-thumb {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .main-container {
+        max-width: 280px;
+        justify-content: center;
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
