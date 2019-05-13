@@ -1,4 +1,4 @@
-# This is a Drum Machine built using React JS for the Front End Library Certificate for FreeCodeCamp
+# Drum Machine App built using React JS for the Front End Library Certificate for FreeCodeCamp
 
 ## The main features of the project are
 
