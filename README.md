@@ -4,5 +4,5 @@
 
 * There are 2 seperate sound banks that can be toggled
 * The user can change the output volume using a volume slider
-* The user can use the mouse to play back sounds or the corresponding keys on the keyboard
+* The user can use the mouse to play back sounds or press the corresponding keys on the keyboard
 * There is visual output of each sound, volume, or bank change
