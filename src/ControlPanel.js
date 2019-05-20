@@ -46,9 +46,16 @@ class ControlPanel extends Component {
                     <input type="range" min="1" max="100" className="slider" value={this.state.volume} onChange={this.changeVolume}/>
                 </div>
 
-                <div className='button-container'>
-                    <button onClick={this.props.click} className='bank'>Bank</button>
-                </div>
+                {this.state.power ? (
+                    <div className='button-container'>
+                        <button onClick={this.props.click} className='bank'>Bank</button>
+                    </div>
+                ) : 
+                    <div className='button-container'>
+                        <button className='bank'>Bank</button>
+                    </div>
+                }
+                
             </div>
         )
     }
