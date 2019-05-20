@@ -62,8 +62,7 @@ class ControlPanel extends Component {
                             <button className='bank'>Bank</button>
                         </div>
                     </div>
-                }
-                
+                } 
             </div>
         )
     }
