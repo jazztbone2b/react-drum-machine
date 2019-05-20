@@ -33,6 +33,11 @@ class ControlPanel extends Component {
         document.getElementById('sound-name').innerHTML = `Volume: ${output}`
         this.props.getRangeVolume(output);
     }
+    powerOffVolume = () => {
+        this.setState(() => ({
+            volume: ''
+        }))
+    }
     render() {
         return (
             <div className='control-panel'>
@@ -55,7 +60,7 @@ class ControlPanel extends Component {
                 ) : 
                     <div>
                         <div className='slide-container'>
-                            <input type="range" min="1" max="100" className="slider"/>
+                            <input type="range" min="" max="" className="slider" value='' onChange={this.powerOffVolume}/>
                         </div>
                     
                         <div className='button-container'>
